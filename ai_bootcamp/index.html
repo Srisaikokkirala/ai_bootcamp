@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Student Registration Portal - Register for courses, manage your academic journey, and join our learning community.">
+    <title>EduVerse — Student Registration Portal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="bg-animation">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+        <div class="orb orb-4"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 40 40" fill="none">
+                        <path d="M20 4L36 14V26L20 36L4 26V14L20 4Z" stroke="url(#logoGrad)" stroke-width="2.5" fill="none"/>
+                        <path d="M20 12L28 17V23L20 28L12 23V17L20 12Z" fill="url(#logoGrad2)" opacity="0.6"/>
+                        <defs>
+                            <linearGradient id="logoGrad" x1="4" y1="4" x2="36" y2="36">
+                                <stop stop-color="#6366f1"/>
+                                <stop offset="1" stop-color="#a855f7"/>
+                            </linearGradient>
+                            <linearGradient id="logoGrad2" x1="12" y1="12" x2="28" y2="28">
+                                <stop stop-color="#818cf8"/>
+                                <stop offset="1" stop-color="#c084fc"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <span class="logo-text">EduVerse</span>
+            </a>
+            <div class="nav-links">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#programs" class="nav-link">Programs</a>
+                <a href="#register" class="nav-link">Register</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                <span>Admissions Open 2026-27</span>
+            </div>
+            <h1 class="hero-title">
+                Shape Your <span class="gradient-text">Future</span> With Us
+            </h1>
+            <p class="hero-subtitle">
+                Join a vibrant community of learners and innovators. Register today to unlock world-class programs, expert faculty, and cutting-edge facilities.
+            </p>
+            <div class="hero-actions">
+                <a href="#register" class="btn btn-primary" id="heroRegisterBtn">
+                    <span>Register Now</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+                <a href="#programs" class="btn btn-ghost" id="heroExploreBtn">
+                    <span>Explore Programs</span>
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number" data-target="5000">0</span><span class="stat-plus">+</span>
+                    <span class="stat-label">Students</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number" data-target="120">0</span><span class="stat-plus">+</span>
+                    <span class="stat-label">Programs</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number" data-target="98">0</span><span class="stat-percent">%</span>
+                    <span class="stat-label">Placement</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="hero-card card-1">
+                <div class="card-icon">🎓</div>
+                <span>Academic Excellence</span>
+            </div>
+            <div class="hero-card card-2">
+                <div class="card-icon">🔬</div>
+                <span>Research Labs</span>
+            </div>
+            <div class="hero-card card-3">
+                <div class="card-icon">🌍</div>
+                <span>Global Network</span>
+            </div>
+            <div class="hero-card card-4">
+                <div class="card-icon">💡</div>
+                <span>Innovation Hub</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section class="programs-section" id="programs">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">Our Programs</span>
+                <h2 class="section-title">Choose Your Path</h2>
+                <p class="section-desc">Discover world-class programs designed to prepare you for the challenges of tomorrow.</p>
+            </div>
+            <div class="programs-grid">
+                <div class="program-card" data-aos="fade-up">
+                    <div class="program-icon-wrap" style="--accent: #6366f1;">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+                    </div>
+                    <h3>Computer Science</h3>
+                    <p>Master AI, machine learning, cybersecurity, and full-stack development with hands-on projects.</p>
+                    <div class="program-meta">
+                        <span>4 Years</span>
+                        <span>B.Tech / M.Tech</span>
+                    </div>
+                </div>
+                <div class="program-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="program-icon-wrap" style="--accent: #ec4899;">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                    </div>
+                    <h3>Business Administration</h3>
+                    <p>Develop leadership, strategic thinking, and entrepreneurial skills for the modern business world.</p>
+                    <div class="program-meta">
+                        <span>3 Years</span>
+                        <span>BBA / MBA</span>
+                    </div>
+                </div>
+                <div class="program-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="program-icon-wrap" style="--accent: #14b8a6;">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M12 6v6l4 2"/></svg>
+                    </div>
+                    <h3>Data Science</h3>
+                    <p>Learn statistical analysis, big data analytics, and visualization to drive data-informed decisions.</p>
+                    <div class="program-meta">
+                        <span>2 Years</span>
+                        <span>M.Sc / PG Diploma</span>
+                    </div>
+                </div>
+                <div class="program-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="program-icon-wrap" style="--accent: #f59e0b;">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                    </div>
+                    <h3>Liberal Arts</h3>
+                    <p>Explore humanities, social sciences, and creative arts with an interdisciplinary approach.</p>
+                    <div class="program-meta">
+                        <span>3 Years</span>
+                        <span>BA / MA</span>
+                    </div>
+                </div>
+                <div class="program-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="program-icon-wrap" style="--accent: #8b5cf6;">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                    </div>
+                    <h3>Mechanical Engineering</h3>
+                    <p>Design, build, and innovate with cutting-edge mechanical systems and robotics technology.</p>
+                    <div class="program-meta">
+                        <span>4 Years</span>
+                        <span>B.Tech / M.Tech</span>
+                    </div>
+                </div>
+                <div class="program-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="program-icon-wrap" style="--accent: #06b6d4;">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                    </div>
+                    <h3>Biomedical Sciences</h3>
+                    <p>Advance healthcare through biotech research, genomics, and pharmaceutical innovation.</p>
+                    <div class="program-meta">
+                        <span>4 Years</span>
+                        <span>B.Sc / M.Sc</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Section -->
+    <section class="registration-section" id="register">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">Get Started</span>
+                <h2 class="section-title">Student Registration</h2>
+                <p class="section-desc">Complete the form below to begin your academic journey with EduVerse.</p>
+            </div>
+
+            <!-- Progress Steps -->
+            <div class="form-progress">
+                <div class="progress-step active" data-step="1">
+                    <div class="step-circle">1</div>
+                    <span class="step-label">Personal Info</span>
+                </div>
+                <div class="progress-line">
+                    <div class="progress-line-fill" id="progressLine1"></div>
+                </div>
+                <div class="progress-step" data-step="2">
+                    <div class="step-circle">2</div>
+                    <span class="step-label">Academic Details</span>
+                </div>
+                <div class="progress-line">
+                    <div class="progress-line-fill" id="progressLine2"></div>
+                </div>
+                <div class="progress-step" data-step="3">
+                    <div class="step-circle">3</div>
+                    <span class="step-label">Review & Submit</span>
+                </div>
+            </div>
+
+            <!-- Registration Form -->
+            <div class="form-container" id="formContainer">
+                <form id="registrationForm" novalidate>
+                    <!-- Step 1: Personal Information -->
+                    <div class="form-step active" id="step1">
+                        <div class="form-step-header">
+                            <h3>Personal Information</h3>
+                            <p>Tell us about yourself</p>
+                        </div>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="firstName">First Name <span class="required">*</span></label>
+                                <div class="input-wrapper">
+                                    <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                                    <input type="text" id="firstName" name="firstName" placeholder="Enter first name" required>
+                                </div>
+                                <span class="error-msg" id="firstNameError"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name <span class="required">*</span></label>
+                                <div class="input-wrapper">
+                                    <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                                    <input type="text" id="lastName" name="lastName" placeholder="Enter last name" required>
+                                </div>
+                                <span class="error-msg" id="lastNameError"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address <span class="required">*</span></label>
+                                <div class="input-wrapper">
+                                    <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                                    <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                                </div>
+                                <span class="error-msg" id="emailError"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number <span class="required">*</span></label>
+                                <div class="input-wrapper">
+                                    <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                                    <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210" required>
+                                </div>
+                                <span class="error-msg" id="phoneError"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="dob">Date of Birth <span class="required">*</span></label>
+                                <div class="input-wrapper">
+                                    <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                                    <input type="date" id="dob" name="dob" required>
+                                </div>
+                                <span class="error-msg" id="dobError"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="gender">Gender <span class="required">*</span></label>
+                                <div class="input-wrapper select-wrapper">
+                                    <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v8M8 12h8"/></svg>
+                                    <select id="gender" name="gender" required>
+                                        <option value="" disabled selected>Select gender</option>
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</option>
+                                        <option value="other">Other</option>
+                                        <option value="prefer-not">Prefer not to say</option>
+                                    </select>
+                                </div>
+                                <span class="error-msg" id="genderError"></span>
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <div></div>
+                            <button type="button" class="btn btn-primary btn-next" id="nextToStep2">
+                                <span>Continue</span>
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Academic Details -->
+                    <div class="form-step" id="step2">
+                        <div class="form-step-header">
+                            <h3>Academic Details</h3>
+                            <p>Share your academic background and program preference</p>
+                        </div>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="program">Program of Interest <span class="required">*</span></label>
+                                <div class="input-wrapper select-wrapper">
+                                    <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                                    <select id="program" name="program" required>
+                                        <option value="" disabled selected>Select a program</option>
+                                        <option value="cs">Computer Science (B.Tech)</option>
+                                        <option value="cs-mtech">Computer Science (M.Tech)</option>
+                                        <option value="bba">Business Administration (BBA)</option>
+                                        <option value="mba">Business Administration (MBA)</option>
+                                        <option value="ds">Data Science (M.Sc)</option>
+                                        <option value="ds-pg">Data Science (PG Diploma)</option>
+                                        <option value="la-ba">Liberal Arts (BA)</option>
+                                        <option value="la-ma">Liberal Arts (MA)</option>
+                                        <option value="me">Mechanical Engineering (B.Tech)</option>
+                                        <option value="me-mtech">Mechanical Engineering (M.Tech)</option>
+                                        <option value="bio-bsc">Biomedical Sciences (B.Sc)</option>
+                                        <option value="bio-msc">Biomedical Sciences (M.Sc)</option>
+                                    </select>
+                                </div>
+                                <span class="error-msg" id="programError"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="admissionYear">Admission Year <span class="required">*</span></label>
+                                <div class="input-wrapper select-wrapper">
+                                    <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                                    <select id="admissionYear" name="admissionYear" required>
+                                        <option value="" disabled selected>Select year</option>
+                                        <option value="2026">2026</option>
+                                        <option value="2027">2027</option>
+                                    </select>
+                                </div>
+                                <span class="error-msg" id="admissionYearError"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="prevSchool">Previous School / College <span class="required">*</span></label>
+                                <div class="input-wrapper">
+                                    <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/></svg>
+                                    <input type="text" id="prevSchool" name="prevSchool" placeholder="Name of previous institution" required>
+                                </div>
+                                <span class="error-msg" id="prevSchoolError"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="percentage">Previous Score / Percentage <span class="required">*</span></label>
+                                <div class="input-wrapper">
+                                    <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22,12 18,12 15,21 9,3 6,12 2,12"/></svg>
+                                    <input type="text" id="percentage" name="percentage" placeholder="e.g., 85% or 8.5 CGPA" required>
+                                </div>
+                                <span class="error-msg" id="percentageError"></span>
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="address">Address <span class="required">*</span></label>
+                                <div class="input-wrapper textarea-wrapper">
+                                    <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                                    <textarea id="address" name="address" rows="3" placeholder="Enter your full address" required></textarea>
+                                </div>
+                                <span class="error-msg" id="addressError"></span>
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-ghost btn-prev" id="backToStep1">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                                <span>Back</span>
+                            </button>
+                            <button type="button" class="btn btn-primary btn-next" id="nextToStep3">
+                                <span>Review</span>
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Review & Submit -->
+                    <div class="form-step" id="step3">
+                        <div class="form-step-header">
+                            <h3>Review & Submit</h3>
+                            <p>Please verify your details before submitting</p>
+                        </div>
+                        <div class="review-container">
+                            <div class="review-section">
+                                <h4>
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                                    Personal Information
+                                </h4>
+                                <div class="review-grid">
+                                    <div class="review-item">
+                                        <span class="review-label">Full Name</span>
+                                        <span class="review-value" id="reviewName">—</span>
+                                    </div>
+                                    <div class="review-item">
+                                        <span class="review-label">Email</span>
+                                        <span class="review-value" id="reviewEmail">—</span>
+                                    </div>
+                                    <div class="review-item">
+                                        <span class="review-label">Phone</span>
+                                        <span class="review-value" id="reviewPhone">—</span>
+                                    </div>
+                                    <div class="review-item">
+                                        <span class="review-label">Date of Birth</span>
+                                        <span class="review-value" id="reviewDob">—</span>
+                                    </div>
+                                    <div class="review-item">
+                                        <span class="review-label">Gender</span>
+                                        <span class="review-value" id="reviewGender">—</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="review-section">
+                                <h4>
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                                    Academic Details
+                                </h4>
+                                <div class="review-grid">
+                                    <div class="review-item">
+                                        <span class="review-label">Program</span>
+                                        <span class="review-value" id="reviewProgram">—</span>
+                                    </div>
+                                    <div class="review-item">
+                                        <span class="review-label">Admission Year</span>
+                                        <span class="review-value" id="reviewYear">—</span>
+                                    </div>
+                                    <div class="review-item">
+                                        <span class="review-label">Previous Institution</span>
+                                        <span class="review-value" id="reviewSchool">—</span>
+                                    </div>
+                                    <div class="review-item">
+                                        <span class="review-label">Score / Percentage</span>
+                                        <span class="review-value" id="reviewScore">—</span>
+                                    </div>
+                                    <div class="review-item full-width">
+                                        <span class="review-label">Address</span>
+                                        <span class="review-value" id="reviewAddress">—</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="terms-check">
+                                <label class="checkbox-wrapper" for="termsAgree">
+                                    <input type="checkbox" id="termsAgree" name="termsAgree">
+                                    <span class="checkmark"></span>
+                                    <span>I agree to the <a href="#" class="link">Terms & Conditions</a> and <a href="#" class="link">Privacy Policy</a></span>
+                                </label>
+                                <span class="error-msg" id="termsError"></span>
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-ghost btn-prev" id="backToStep2">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                                <span>Back</span>
+                            </button>
+                            <button type="submit" class="btn btn-primary btn-submit" id="submitBtn">
+                                <span>Submit Registration</span>
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+
+                <!-- Success State -->
+                <div class="success-state" id="successState">
+                    <div class="success-animation">
+                        <svg class="checkmark-svg" viewBox="0 0 100 100">
+                            <circle class="checkmark-circle" cx="50" cy="50" r="45" fill="none" stroke="url(#successGrad)" stroke-width="3"/>
+                            <path class="checkmark-path" d="M30 50 L45 65 L70 35" fill="none" stroke="url(#successGrad)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                            <defs>
+                                <linearGradient id="successGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#6366f1"/>
+                                    <stop offset="100%" stop-color="#a855f7"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <h2 class="success-title">Registration Successful! 🎉</h2>
+                    <p class="success-msg">Thank you for registering with EduVerse. Your application ID is:</p>
+                    <div class="app-id" id="appId">EDU-2026-XXXXX</div>
+                    <p class="success-note">A confirmation email has been sent to your registered email address. Our admissions team will review your application and get back to you within 3-5 business days.</p>
+                    <button class="btn btn-primary" id="newRegistrationBtn">
+                        <span>New Registration</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">Get in Touch</span>
+                <h2 class="section-title">Contact Us</h2>
+                <p class="section-desc">Have questions? We'd love to hear from you.</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-card" id="contactEmail">
+                    <div class="contact-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    </div>
+                    <h3>Email</h3>
+                    <p>admissions@eduverse.edu</p>
+                </div>
+                <div class="contact-card" id="contactPhone">
+                    <div class="contact-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    </div>
+                    <h3>Phone</h3>
+                    <p>+91 1800-123-4567</p>
+                </div>
+                <div class="contact-card" id="contactAddress">
+                    <div class="contact-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    </div>
+                    <h3>Campus</h3>
+                    <p>Innovation Drive, Knowledge Park, India</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <div class="logo-icon">
+                            <svg viewBox="0 0 40 40" fill="none">
+                                <path d="M20 4L36 14V26L20 36L4 26V14L20 4Z" stroke="url(#logoGradF)" stroke-width="2.5" fill="none"/>
+                                <path d="M20 12L28 17V23L20 28L12 23V17L20 12Z" fill="url(#logoGrad2F)" opacity="0.6"/>
+                                <defs>
+                                    <linearGradient id="logoGradF" x1="4" y1="4" x2="36" y2="36">
+                                        <stop stop-color="#6366f1"/>
+                                        <stop offset="1" stop-color="#a855f7"/>
+                                    </linearGradient>
+                                    <linearGradient id="logoGrad2F" x1="12" y1="12" x2="28" y2="28">
+                                        <stop stop-color="#818cf8"/>
+                                        <stop offset="1" stop-color="#c084fc"/>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+                        <span class="logo-text">EduVerse</span>
+                    </a>
+                    <p>Empowering the next generation of thinkers, creators, and leaders through transformative education.</p>
+                </div>
+                <div class="footer-links-group">
+                    <div class="footer-col">
+                        <h4>Quick Links</h4>
+                        <a href="#home">Home</a>
+                        <a href="#programs">Programs</a>
+                        <a href="#register">Register</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Programs</h4>
+                        <a href="#">Computer Science</a>
+                        <a href="#">Business</a>
+                        <a href="#">Data Science</a>
+                        <a href="#">Liberal Arts</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Support</h4>
+                        <a href="#">FAQ</a>
+                        <a href="#">Help Center</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 EduVerse. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Twitter" class="social-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    </a>
+                    <a href="#" aria-label="LinkedIn" class="social-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    </a>
+                    <a href="#" aria-label="Instagram" class="social-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
