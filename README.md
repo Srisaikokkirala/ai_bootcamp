@@ -1,4 +1,4 @@
-# Project Name
+# EduVerse
 
 ## 📌 About
 This project was built during the **Google for Developers - Build with AI Bootcamp**, organized by **Hack2Skill**.
